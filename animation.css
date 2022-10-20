@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*:after,
+*:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    /* border: 1px solid #ffffff; */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+div:before{
+    content: "";
+    height:150%;
+    width: 150%;
+    position: absolute;
+    background-image: conic-gradient(
+        #fd400c,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7,
+        #fd004c
+    );
+    top: -25%;
+    left: -25%;
+    animation: animasiya 1.5s infinite linear;
+}
+@keyframes animasiya{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+div:after{
+    content: "MilliSoft";
+    position: absolute;
+    background-color: black;
+    height: 93%;
+    width: 93%;
+    top: 3.5%;
+    left: 3.5%;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    font-size: 50px;
+}
